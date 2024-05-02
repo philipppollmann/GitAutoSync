@@ -1,3 +1,8 @@
+mod git_commands;
+mod message_generator;
+
+
 fn main() {
-    println!("Hello, world!");
+    let message = message_generator::generate_message();
+    format!("{}", message);
 }
