@@ -2,9 +2,10 @@ extern crate chrono;
 
 use chrono::prelude::*;
 
-pub(crate) fn generate_message() -> String{
+pub fn generate_message() -> String{
     let today = get_today();
-    format!("Heute ist der {}", today)
+    let message = format!("Version: {}", today);
+    message
 }
 
 fn get_today() -> String{
