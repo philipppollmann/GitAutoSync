@@ -16,7 +16,7 @@ fn main() {
         for project_path in &project_list {
             println!("Checking directory for: {}", project_path.display());
 
-            // Überprüfe, ob das Verzeichnis existiert
+
             if project_folders::check_directory_exists(project_path) {
                 println!("Directory exists: {}", project_path.display());
 
