@@ -1,6 +1,7 @@
+use std::path::PathBuf;
 use std::process::Command;
 
-pub fn status(folder_path: &str) -> Result<(), String> {
+pub fn status(folder_path: &PathBuf) -> Result<(), String> {
     let status = Command::new("git")
         .arg("-C")
         .arg(folder_path)
@@ -16,7 +17,7 @@ pub fn status(folder_path: &str) -> Result<(), String> {
     }
 }
 
-pub fn add(folder_path: &str) -> Result<(), String> {
+pub fn add(folder_path: &PathBuf) -> Result<(), String> {
     let status = Command::new("git")
         .arg("-C")
         .arg(folder_path)
@@ -32,7 +33,7 @@ pub fn add(folder_path: &str) -> Result<(), String> {
     }
 }
 
-pub(crate) fn commit(folder_path: &str, commit_message: String) -> Result<(), String> {
+pub(crate) fn commit(folder_path: &PathBuf, commit_message: &String) -> Result<(), String> {
     let output = Command::new("git")
         .arg("-C")
         .arg(folder_path)
@@ -50,7 +51,7 @@ pub(crate) fn commit(folder_path: &str, commit_message: String) -> Result<(), St
     }
 }
 
-pub fn push(folder_path: &str) -> Result<(), String> {
+pub fn push(folder_path: &PathBuf) -> Result<(), String> {
     let status = Command::new("git")
         .arg("-C")
         .arg(folder_path)
@@ -65,7 +66,7 @@ pub fn push(folder_path: &str) -> Result<(), String> {
     }
 }
 
-pub fn pull(folder_path: &str) -> Result<(), String> {
+pub fn pull(folder_path: &PathBuf) -> Result<(), String> {
     let status = Command::new("git")
         .arg("-C")
         .arg(folder_path)
