@@ -7,6 +7,8 @@ pub fn get_project_list() -> Vec<PathBuf> {
     projects.push(PathBuf::from("/Users/philipppollmann/Library/Mobile Documents/iCloud~com~logseq~logseq/Documents/Logseq"));
     projects.push(PathBuf::from(r"C:\github\Obsidian"));
     projects.push(PathBuf::from(r"C:\github\Obsidian"));
+    projects.push(PathBuf::from(r"/Users/A200017104/GitHub/Obsidian"));
+    projects.push(PathBuf::from(r"/Users/A200017104/GitHub/Logseq"));
     projects
 }
 
